@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hvac-landing.alwejhagroup.com/sitemap.xml
