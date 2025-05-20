@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /cdn-cgi/l/email-protection
-Allow: /
-
-Sitemap: https://hvac-landing.alwejhagroup.com/sitemap.xml
+Disallow: /cdn-cgi/
+Allow: /hvac-systems/
+Allow: /cooling-solutions/
+Sitemap: https://hvac.alwejhagroup.com/sitemap.xml
