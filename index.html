@@ -1,150 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="description" content="Expert HVAC services in Oman, offering installation, maintenance, and repair for residential, commercial, and industrial clients. Trust AL WEJHA GROUP for reliable and energy-efficient HVAC solutions." />
-  <meta name="keywords" content="HVAC services Oman, air conditioning Oman, HVAC installation Oman, HVAC maintenance Oman, AL WEJHA GROUP, Oman HVAC contractors, energy-efficient HVAC Oman, HVAC repair Oman" />
-   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://hvac.alwejhagroup.com/" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <meta name="author" content="AL WEJHA GROUP" />
-  <title>Expert HVAC Services in Oman | AL WEJHA GROUP</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta name="description" content="AL WEJHA GROUP: Premier HVAC Services in Oman - Expert AC Installation & Maintenance in Muscat, Salalah, Sohar. Commercial & Residential Climate Control Solutions.">
+  <meta name="keywords" content="HVAC Oman, AC Repair Muscat, Air Conditioning Salalah, Commercial Cooling Sohar, Energy-Efficient HVAC Oman, AL WEJHA GROUP Services">
+  <link rel="canonical" href="https://hvac.alwejhagroup.com/">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <title>Professional HVAC Services in Oman | AC Installation & Maintenance - AL WEJHA GROUP</title>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Oman's Trusted HVAC Experts | AL WEJHA GROUP Climate Solutions">
+  <meta property="og:description" content="Certified HVAC Services Across Oman - Energy-Efficient AC Installation & Maintenance for Homes & Businesses">
+  <meta property="og:image" content="https://hvac.alwejhagroup.com/hvac.webp">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Professional HVAC Services in Oman | AL WEJHA GROUP">
+  <meta name="twitter:description" content="Oman's Leading Air Conditioning Specialists - Commercial & Residential Climate Control Solutions">
+
+  <!-- Inline Critical CSS -->
   <style>
+    :root {
+      --primary-blue: #0b5394;
+      --accent-orange: #f96302;
+      --dark-text: #2c3e50;
+    }
     body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f4f4f4;
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
-      color: #333;
       line-height: 1.6;
+      color: var(--dark-text);
     }
     header {
-      background-color: #0b74de;
+      background: linear-gradient(rgba(11,83,148,0.85), rgba(11,83,148,0.85)),
+                  url('hvac.webp') center/cover;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       color: #fff;
-      padding: 40px 20px;
+      padding: 0 20px;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 4rem 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       text-align: center;
     }
-    header h1 {
-      font-size: 2.2rem;
-      margin: 0;
-    }
-    nav {
-      text-align: center;
-      margin: 20px 0;
-    }
-    nav a {
-      margin: 0 10px;
-      color: #004080;
-      text-decoration: underline;
+    .region-badge {
+      display: inline-block;
+      background: var(--accent-orange);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      margin: 5px;
       font-weight: 600;
     }
-    section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 20px;
-      background-color: #fff;
-    }
-    h2, h3 {
-      color: #004080;
-    }
-    .cta, .backlink {
-      display: inline-block;
-      background-color: #0b74de;
-      color: #fff;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin: 10px 0;
-    }
-    .cta:hover, .backlink:hover {
-      background-color: #095cb5;
-    }
-    .contact {
-      margin-top: 20px;
-      text-align: center;
-    }
-    .contact a {
-      display: inline-block;
-      margin: 5px 10px;
-      color: #0b74de;
-      text-decoration: none;
-    }
-    img.hero-img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin: 20px 0;
-    }
-    footer {
-      background-color: #e0ecf4;
-      text-align: center;
+    .cta-bar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: var(--primary-blue);
       padding: 15px;
-      font-size: 0.9rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      z-index: 1000;
+    }
+    .cta-btn {
+      background: var(--accent-orange);
+      color: #fff!important;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s;
+    }
+    @media (max-width: 768px) {
+      header { min-height: 60vh; }
+      .service-grid { grid-template-columns: 1fr; }
+      .cta-bar { flex-wrap: wrap; }
     }
   </style>
+
+  <!-- Preload Hero Image -->
+  <link rel="preload" href="hvac.webp" as="image">
+  
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "AL WEJHA GROUP HVAC Services",
+    "image": "hvac.webp",
+    "description": "Oman's leading HVAC service provider",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "Oman",
+      "addressRegion": ["Muscat", "Salalah", "Sohar", "Nizwa"]
+    },
+    "telephone": "+96879271055",
+    "email": "business@alwejhagroup.com",
+    "sameAs": ["https://www.alwejhagroup.com/"]
+  }
+  </script>
 </head>
+
 <body>
   <header>
-    <h1>Expert HVAC Services in Oman</h1>
-    <p>Reliable Installation, Maintenance & Repair Solutions</p>
+    <div>
+      <h1>Oman's Premier HVAC Services</h1>
+      <p>Serving Muscat, Salalah, Sohar & All Regions</p>
+      <div style="margin-top: 2rem;">
+        <span class="region-badge">Muscat Governorate</span>
+        <span class="region-badge">Dhofar Region</span>
+        <span class="region-badge">Al Batinah</span>
+        <span class="region-badge">Al Dakhiliyah</span>
+      </div>
+    </div>
   </header>
 
-  <!-- Navigation with Backlinks to Main Website Pages -->
-  <nav>
-    <a href="https://www.alwejhagroup.com/">Home</a>
-    <a href="https://www.alwejhagroup.com/area-of-expertise" target="_blank" aria-label="Area Of Expertise">Area Of Expertise</a>
-    <a href="https://www.alwejhagroup.com/our-services" target="_blank" aria-label="Our Services">Our Services</a>
-    <a href="https://www.alwejhagroup.com/our-clients" target="_blank" aria-label="Our Clients">Our Clients</a>
-    <a href="https://www.alwejhagroup.com/contact" target="_blank" aria-label="Contact">Contact</a>
+  <nav style="background: var(--primary-blue); padding: 1rem; position: sticky; top: 0; z-index: 100;">
+    <a href="https://www.alwejhagroup.com/" style="color: #fff; margin: 0 1.5rem;">Home</a>
+    <a href="https://www.alwejhagroup.com/area-of-expertise" style="color: #fff; margin: 0 1.5rem;">Expertise</a>
+    <a href="https://www.alwejhagroup.com/our-services" style="color: #fff; margin: 0 1.5rem;">Services</a>
+    <a href="https://www.alwejhagroup.com/contact" style="color: #fff; margin: 0 1.5rem;">Contact</a>
   </nav>
 
-  <section>
-    <!-- Fixed Hero Image -->
-    <img class="hero-img" src="./hvac.webp" alt="HVAC Services in Oman - Installation, Maintenance, and Repair">
+  <main>
+    <section class="service-grid">
+      <article class="service-card">
+        <h2>Commercial HVAC Solutions</h2>
+        <p>Oman-standard climate control systems for offices, malls, and industrial facilities</p>
+        <ul style="text-align: left; margin-top: 1rem;">
+          <li>✓ Energy Efficiency Optimization</li>
+          <li>✓ VRF System Installation</li>
+          <li>✓ Omani Compliance Certifications</li>
+        </ul>
+      </article>
 
-    <!-- Enriched SEO Content -->
-    <h2>Comprehensive HVAC Solutions Across Oman</h2>
-    <p>
-      AL WEJHA GROUP offers comprehensive HVAC system installation, maintenance, and repair services for residential, commercial, and industrial clients across Oman. Our certified technicians deliver energy-efficient solutions, ensuring optimal indoor comfort all year round.
-    </p>
+      <article class="service-card">
+        <h2>Residential AC Services</h2>
+        <p>Complete home climate solutions for Oman's unique weather conditions</p>
+        <ul style="text-align: left; margin-top: 1rem;">
+          <li>✓ Split System Installation</li>
+          <li>✓ Ductless Mini-Splits</li>
+          <li>✓ 24/7 Emergency Repair</li>
+        </ul>
+      </article>
 
-    <h3>Why Choose AL WEJHA GROUP for HVAC Services?</h3>
-    <ul>
-      <li>Experienced and certified HVAC professionals.</li>
-      <li>Customized solutions for diverse client needs.</li>
-      <li>Commitment to energy efficiency and sustainability.</li>
-      <li>Proven track record with successful projects across Oman.</li>
-    </ul>
+      <article class="service-card">
+        <h2>Maintenance Contracts</h2>
+        <p>Annual maintenance programs for optimal system performance</p>
+        <ul style="text-align: left; margin-top: 1rem;">
+          <li>✓ Filter Replacement Services</li>
+          <li>✓ Refrigerant Level Checks</li>
+          <li>✓ Electrical System Audits</li>
+        </ul>
+      </article>
+    </section>
 
-    <h3>Our HVAC Services Include:</h3>
-    <p>
-      We specialize in the design, installation, and maintenance of HVAC systems, including air conditioning units, ventilation systems, and heating solutions. Our services are tailored to meet the specific requirements of each client, ensuring optimal performance and energy efficiency.
-    </p>
+    <section style="text-align: center; padding: 3rem 1rem; background: #f8f9fa;">
+      <h2>HVAC Services Across Oman</h2>
+      <div style="max-width: 800px; margin: 2rem auto;">
+        <p>We provide professional HVAC solutions in all regions:</p>
+        <div style="columns: 2; margin: 2rem 0;">
+          <p>Muscat • Salalah • Sohar • Nizwa<br>
+          Sur • Ibri • Rustaq • Buraimi<br>
+          Saham • Barka • Khasab • Duqm</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- Additional Section with Backlinks -->
-    <h3>Explore More About AL WEJHA GROUP</h3>
-    <p>
-      To learn more about our full range of services, please visit our main website:
-      <a class="backlink" href="https://www.alwejhagroup.com/" target="_blank" aria-label="Visit Main Website">Visit AL WEJHA GROUP</a>
-    </p>
+  <div class="cta-bar">
+    <a href="https://wa.me/96879271055" class="cta-btn" aria-label="Chat on WhatsApp">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      WhatsApp
+    </a>
+    <a href="tel:+96879271055" class="cta-btn" aria-label="Call Now">
+      📞 Call Now
+    </a>
+    <a href="mailto:business@alwejhagroup.com" class="cta-btn" aria-label="Email Us">
+      ✉️ Email
+    </a>
+  </div>
 
-    <!-- Call-To-Action -->
-    <p>
-      Ready to enhance your indoor comfort with our expert HVAC solutions? Contact us now for a free consultation!
-    </p>
-    <a class="cta" href="https://wa.me/96879271055" target="_blank" aria-label="Chat on WhatsApp">Chat on WhatsApp</a>
-    <a class="cta" href="tel:+96879271055" aria-label="Call Us">Call Us</a>
-    <a class="cta" href="mailto:business@alwejhagroup.com" aria-label="Email Us">Email Us</a>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 AL WEJHA GROUP | 
-      <a href="https://www.alwejhagroup.com/sitemap.xml" aria-label="Sitemap">Sitemap</a> | 
-      <a href="https://www.alwejhagroup.com/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a> | 
-      <a href="https://www.alwejhagroup.com/terms-of-service" aria-label="Terms of Service">Terms of Service</a>
-    </p>
+  <footer style="background: var(--primary-blue); color: #fff; padding: 2rem; text-align: center;">
+    <p>© 2025 AL WEJHA GROUP - HVAC Solutions Provider in Oman</p>
+    <nav style="margin-top: 1rem;">
+      <a href="https://www.alwejhagroup.com/privacy" style="color: var(--accent-orange); margin: 0 1rem;">Privacy Policy</a>
+      <a href="https://www.alwejhagroup.com/licensing" style="color: var(--accent-orange); margin: 0 1rem;">Omani Licenses</a>
+      <a href="https://www.alwejhagroup.com/projects" style="color: var(--accent-orange); margin: 0 1rem;">Our Projects</a>
+    </nav>
   </footer>
+
+  <!-- Lazy Load Images -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => img.loading = 'lazy');
+    });
+  </script>
 </body>
 </html>
